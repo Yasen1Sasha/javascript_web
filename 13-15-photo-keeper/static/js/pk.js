@@ -1,38 +1,68 @@
 console.log('start');
 
-
-class MainMenu {
+class MenuHandler {
     constructor() {
-        this.numbers = [];
+        this.menuTriger = document.querySelector('.menuTrigger');
+        this.mainMenuContainer = document.querySelector('.mainMenuContainer');
+        this.initEventListeners();
     }
 
-    addNumber(num) {
-        if (typeof num === 'number') {
-            this.numbers.push(num);
-        }
+    initEventListeners() {
+        this.menuTriger.addEventListener('click', () => {
+            this.mainMenuContainer.classList.toggle('mainMenuOpened');
+        });
     }
+}
 
-    removeNumber(num) {
-        this.numbers = this.numbers.filter(n => n !== num);
-    }
+class PhotoGallery {
+    constructor() {
+        this.allComments = [
+            
+    'Цей кадр нереально крутий! :)',
+    'Ти вмієш дивувати! Кожен кадр - поєднання життєлюбності і краси',
+    'Спинися мить, прекрасна ти!',
+    'Просто супер! Як тобі це вдається?',
+    'Це просто шедевр мистецтва',
+    'В цьому штучному світі так приємно знайти щось натуральне))',
+    'Клас!!!))',
+    'Нереально чудово!',
+    'А ти вмієш дивувати ;)',
+    'Це фото так і проситься в рамочку на стіну']
 
-    countTagCharacters(tagName) {
-        const element = document.querySelector(tagName);
-        if (element && element.textContent) {
-            return element.textContent.length;
-        }
-        return 0;
-    }
-    multiplyNumbers(a, b) {
-       return a * b;
-    }
-    divideNumbers(a, b) {
-       if (b === 0) {
-           return null; // Avoid division by zero
-       }
-       return a / b;
-    }   
+        
+        this.allDescriptions = [
+    'Коли радості немає меж',
+    'Любов в кожному пікселі',
+    'Фото заряджене позитивом',
+    'Зловив дзен',
+    'Як мало потрібно для щастя',
+    'Знали б ви що в мене на умі! ;)',
+    'Show must go on',
+    'Good vibes only',
+    'My inspiration',
+    'On my way to paradise',
+    'Що це, якщо не любов? Х)'
 
+        ]
+    }
+    genertePicturesDB() {
+        const pictures = [];
+        for (let i = 0; i <= number; i++) {
+            const comments = [];
+            const CommentsCount  =
+    }
+    showpictures = () {
     
+    }
+    showCheckedPicture() {
+            
+    }
 
 }
+
+        
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    new MenuHandler();
+});
